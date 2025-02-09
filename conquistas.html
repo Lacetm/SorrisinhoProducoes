@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conquistas</title>
+</head>
+<body style="margin: 0; font-family: 'Montserrat', sans-serif; background-color: #121212; color: #fff;">
+    <header class="header" style="text-align: center; padding: 20px; background-color: #1f1f1f; border-bottom: 2px solid #9648a9;">
+        <h1 style="margin: 0; font-size: 2.5em;">Conquistas</h1>
+    </header>
+    <main class="achievements-container" style="display: flex; flex-wrap: wrap; justify-content: center; padding: 20px;">
+        <div class="achievement" style="background-color: #1f1f1f; border: 2px solid #9648a9; border-radius: 10px; margin: 10px; padding: 20px; width: 300px; text-align: center; transition: transform 0.3s, box-shadow 0.3s;">
+            <img src="assets/img/gdq.png" alt="Conquista 1" style="width: 275px; height: 250px; margin-bottom: 10px;">
+            <div class="achievement-info">
+                <h2 style="margin: 10px 0; font-size: 1.5em;">Conquista 1</h2>
+                <p style="margin: 0; font-size: 1em; color: #ccc;">Fomos selecionados para a Fase 1 do Game Dev Quest</p>
+            </div>
+        </div>
+        <div class="achievement" style="background-color: #1f1f1f; border: 2px solid #9648a9; border-radius: 10px; margin: 10px; padding: 20px; width: 300px; text-align: center; transition: transform 0.3s, box-shadow 0.3s;">
+            <img src="assets/img/work-victory.jpg" alt="Conquista 2" style="width: 100px; height: 100px; margin-bottom: 10px;">
+            <div class="achievement-info">
+                <h2 style="margin: 10px 0; font-size: 1.5em;">Conquista 2</h2>
+                <p style="margin: 0; font-size: 1em; color: #ccc;">Descrição da conquista 2.</p>
+            </div>
+        </div>
+        <!-- Adicione mais conquistas conforme necessário -->
+    </main>
+    <div style="text-align: center; margin: 20px;">
+        <a href="index.html" style="display: inline-block; padding: 10px 20px; background-color: #9648a9; color: #fff; text-decoration: none; border-radius: 5px; font-weight: bold;">Voltar</a>
+    </div>
+    <script>
+        document.querySelectorAll('.achievement').forEach(item => {
+            item.addEventListener('mouseover', () => {
+                item.style.transform = 'scale(1.05)';
+                item.style.boxShadow = '0 0 15px rgba(150, 72, 169, 0.5)';
+            });
+            item.addEventListener('mouseout', () => {
+                item.style.transform = 'scale(1)';
+                item.style.boxShadow = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
