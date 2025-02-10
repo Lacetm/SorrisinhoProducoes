@@ -39,6 +39,27 @@
     function closeHistoriaModal() {
         document.getElementById('historiaModal').style.display = 'none';
     }
+
+    function applyResponsiveStyles() {
+                  if (window.innerWidth <= 610) {
+                      document.querySelector('.about--banner').style.height = "200px";
+                      const h2 = document.querySelector('.about--banner h2');
+                      if (h2) {
+                          h2.style.fontSize = "48px";
+                          h2.style.marginTop = "20px";
+                      }
+                  } else {
+                      document.querySelector('.about--banner').style.height = "320px";
+                      const h2 = document.querySelector('.about--banner h2');
+                      if (h2) {
+                          h2.style.fontSize = "68px";
+                          h2.style.marginTop = "35px";
+                      }
+                  }
+              }
+          
+              window.addEventListener('resize', applyResponsiveStyles);
+              window.addEventListener('load', applyResponsiveStyles);
     
 </script>
 
@@ -168,29 +189,6 @@
                   </a>
               </div>
           </div>
-          
-          <script>
-              function applyResponsiveStyles() {
-                  if (window.innerWidth <= 610) {
-                      document.querySelector('.about--banner').style.height = "200px";
-                      const h2 = document.querySelector('.about--banner h2');
-                      if (h2) {
-                          h2.style.fontSize = "48px";
-                          h2.style.marginTop = "20px";
-                      }
-                  } else {
-                      document.querySelector('.about--banner').style.height = "320px";
-                      const h2 = document.querySelector('.about--banner h2');
-                      if (h2) {
-                          h2.style.fontSize = "68px";
-                          h2.style.marginTop = "35px";
-                      }
-                  }
-              }
-          
-              window.addEventListener('resize', applyResponsiveStyles);
-              window.addEventListener('load', applyResponsiveStyles);
-          </script>
           
                 <!-- Modal de Filosofia -->
 <div id="filosofiaModal" style="display: none; justify-content: center; align-items: center; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 1000;">
